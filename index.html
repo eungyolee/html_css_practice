@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://freeiconshop.com/wp-content/uploads/edd/html-flat.png" type="image/x-icon">
+    <title>HTML, CSS 총정리</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Jua', sans-serif;
+            border-radius: 10px;
+        }
+        body {
+            background-color: whitesmoke;
+        }
+
+        div:nth-child(1) {
+            color: darkred;
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+        .second {
+            color: turquoise;
+            background-color: slateblue;
+            line-height: 30px;
+            height: 30px;
+        }
+        .third {
+            color: snow;
+            background-color: violet;
+            line-height: 30px;
+            height: 30px;
+        }
+        .fourth {
+            text-decoration: none;
+            color: orange;
+            background-color: palegreen;
+            line-height: 30px;
+            height: 30px;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+
+        .fifth {
+            color: plum;
+            background-color: purple;
+        }
+        .sixth {
+            color: royalblue;
+            background-color: salmon;
+        }
+        table {
+            background-color: aqua;
+        }
+        tr {
+            background-color: white;
+        }
+        .seventh {
+            color: teal;
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    <div class="first">
+        <h1>&lt;h1&gt;은 제목 태그입니다.</h1>
+        <h2>&lt;h2&gt;는 소제목 정도 되는 태그입니다.</h2>
+        <h3>&lt;h3&gt;도 제목 태그이지만 많이 쓰이지 않습니다...</h3>
+        <h4>&lt;h4&gt;도 제목 태그이지만 많이 쓰이지 않습니다...</h4>
+        <h5>&lt;h5&gt;도 제목 태그이지만 많이 쓰이지 않습니다...</h5>
+        <h6>&lt;h6&gt;도 제목 태그이지만 많이 쓰이지 않습니다...</h6>
+    </div>
+    <hr>
+    <div class="second">
+        &lt;div&gt; 태그는 대표적인 block 요소입니다.
+        &lt;span&gt; 태그는 대표적인 inline 요소입니다.
+    </div>
+    <hr>
+    <div class="third">
+        <p>&lt;p&gt; 태그는 문단 태그입니다! block 요소입니다.</p>
+    </div>
+    <hr>
+    <div class="fourth">
+        <a href="https://google.com" target="_blank">&lt;a&gt; 태그는 하이퍼링크 태그입니다.</a>
+    </div>
+    <hr>
+    <div class="fifth">
+        <img src="https://pbs.twimg.com/media/D8NJmBvUYAAu4kv.png"><br>&lt;img&gt; 태그는 이미지 태그입니다.<br>
+        ※매년 6/5일은 세계 환경의 날입니다! 이 파일을 만든 날짜가 6/5입니다!
+    </div>
+    <hr>
+    <div class="sixth">
+        &lt;table&gt; 태그와 &lt;input&gt; 태그입니다!<br>
+        table 태그는 표를 만드는 태그, input 태그는 입력을 받는 태그입니다.
+        <table border="1">
+            <tbody>
+            <tr>
+                <th>type="text"</th>
+                <td>
+                    <input type="text" size="10">
+                </td>
+                <td>일반적인 텍스트를 입력받는 칸</td>
+            </tr>
+            <tr>
+                <th>type="password"</th>
+                <td>
+                    <input type="password" size="10">
+                </td>
+                <td>비밀번호 등을 입력받는 칸</td>
+            </tr>
+            <tr>
+                <th>type="submit"</th>
+                <td><input type="submit" size="10" value="버튼"></td>
+                <td>누르면 서버로 데이터를 전송하는 버튼을 생성</td>
+            </tr>
+            <tr>
+                <th>type="reset"</th>
+                <td>
+                    <input type="reset">
+                </td>
+                <td>누르면 작성한 모든 내용을 초기화하는 버튼을 생성</td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    ※ submit과 reset 버튼은 같은 form 태그 내부에 속한 input 태그들에만 적용된다.
+                </th>
+            </tr>
+            <tr>
+                <th>type="radio"</th>
+                <td>
+                    <input type="radio" name="b" id="one" checked=""><label for="one">1</label><br>
+                    <input type="radio" name="b" id="two"><label for="two">2</label><br>
+                    <input type="radio" name="b" id="three"><label for="three">3</label><br>
+                </td>
+                <td>
+                    여러가지 선택 중 하나를 선택할 수 있는 버튼<br>
+                    하나만 선택하기 위해서는 name 속성이 같아야 한다.
+                </td>
+            </tr>
+            <tr>
+                <th>type="checkbox"</th>
+                <td>
+                    <input id="hana" name="n" type="checkbox">
+                    <label for="hana">1</label><br>
+                    <input id="dool" name="n" type="checkbox">
+                    <label for="dool">2</label><br>
+                    <input id="set" name="n" type="checkbox">
+                    <label for="set">3</label>
+                </td>
+                <td>하는 역할은 radio 버튼과 비슷하지만 복수 선택을 할 수 있다.</td>
+            </tr>
+            <tr>
+                <th>type="email"</th>
+                <td>
+                    <form action="">
+                        <input type="email"><br>
+                    </form>
+                </td>
+                <td>
+                    이메일을 입력하는 칸을 생성한다.<br>
+                    사용자가 입력한 내용이 이메일인지 검사한다.
+                </td>
+            </tr>
+            <tr>
+                <th>type="color"</th>
+                <td>
+                    <form>
+                        <input type="color" name="color">
+                    </form>
+                    
+                </td>
+                <td>
+                    사용자가 색상을 선택할 수 있는 태그<br>
+                    값은 r, g, b값이 16진수 6자리로 전송된다.
+                </td>
+            </tr>
+            <tr>
+                <th>type="date"</th>
+                <td>
+                    <input type="date">
+                </td>
+                <td>사용자가 날짜를 선택할 수 있게 해준다.</td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    - 번 외 -
+                </th>
+            </tr>
+            <tr>
+                <th>textarea</th>
+                <td><textarea cols="30" rows="10" placeholder="textarea"></textarea></td>
+                <td>장문의 텍스트를 이용할 때 사용하는 태그</td>
+            </tr>
+            <tr>
+                <th>select</th>
+                <td>
+                    <form>
+                        <select name="country">
+                            <option>질문</option>
+                            <option value="kr">항1</option>
+                            <option value="us">항2</option>
+                        </select>
+                    </form>
+                </td>
+                <td>사용자가 여러 가지 옵션을 선택할 수 있다.</td>
+            </tr>
+        </tbody></table>
+    </div>
+    <hr>
+    <div class="seventh">
+        &lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt; 태그
+        ul은 순서가 없고, ol은 있으며, dl은 설명이 있다.
+        <br>
+        ul 태그
+        <ul>
+            <li>1</li>
+            <li>2</li>
+        </ul>
+        <br>
+        ol 태그
+        <ol>
+            <li>a</li>
+            <li>b</li>
+        </ol>
+        <br>
+        dl 태그
+        <dl>
+            &nbsp;&nbsp;&nbsp;&nbsp;<dt>항목1</dt>
+            &nbsp;&nbsp;&nbsp;&nbsp;<dd>설명1</dd>
+            &nbsp;&nbsp;&nbsp;&nbsp;<dt>항목2</dt>
+            &nbsp;&nbsp;&nbsp;&nbsp;<dd>설명2</dd>
+        </dl>
+    </div>
+</body>
+</html>
